@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>SHAKE BUTTON</title>
+          <style>
+                  *{
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                  }  
+                  body{
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgb(63, 17, 17);
+                    display: grid;
+                    place-items: center;
+                  }
+                  button{
+                    padding: 30px 60px;
+                    background-color: transparent;
+                    border: 3px solid bisque;
+                    color: bisque;
+                    font-size: 17px;
+                  }
+                  button:hover{
+                    color:rgb(240, 69, 69);
+                    border-color: rgb(240, 69, 69);
+                    animation: shaking .15s linear infinite;
+                  }
+                  @keyframes shaking{
+                    0%{
+                              rotate: 10deg;
+                    }
+                    50%{
+                              rotate: -10deg;
+                    }
+                    100%{
+                              rotate: 10deg;
+                    }
+                  }
+          </style>
+</head>
+<body>
+          <button>
+                   TOUCH ME
+          </button>
+</body>
+</html>
