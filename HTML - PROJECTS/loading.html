@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Loading</title>
+          <style>
+                    *{
+                              padding: 0;
+                              margin: 0;
+                              box-sizing: border-box;
+                    }
+                    body{
+                              height: 100vh;
+                              width: 100vw;
+                              background: maroon;
+                              display: grid;
+                              place-items: center;
+                    }
+                    .loader{
+                              width: 200px;
+                              height: 200px;
+                              background: black;
+                              border-radius: 50%;
+                              position: relative;
+                              animation: loading 1s linear infinite reverse;
+                    }
+                    .loader::before{
+                              content: "";
+                              position: absolute;
+                              width: 150px;
+                              aspect-ratio: 1;
+                              top: 5px;
+                              left: 0;
+                              background: maroon;
+                              border-radius: 50%;
+                    }
+                    .loader::after{
+                              content: "";
+                              position: absolute;
+                              width: 50px;
+                              aspect-ratio: 1;
+                              top: -25px;
+                              left: 60px;
+                              background: black;
+                              border-radius: 50%;
+                              box-shadow: -1px 5px 20px 12px rgba(0, 0, 0);
+                    }
+                    @keyframes loading{
+                              0%{
+                                        rotate: 0deg;
+                              }
+                              100%{
+                                        rotate: 360deg;
+                              }
+                    }
+          </style>
+</head>
+<body>
+         <div class="loader"></div> 
+</body>
+</html>
