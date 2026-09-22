@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>carsoual</title>
+          <style>
+                    *{
+                              padding:0;
+                              margin: 0;
+                              box-sizing: border-box;
+                    }
+                    body{
+                              width: 100vw;
+                              height: 100vh;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              background-color: black;
+                    }
+                    div{
+                              width: 900px;
+                              height: 500px;
+                              border-radius: 40px;
+                              animation: photos 10s linear infinite;
+                              background-image: url(/thumbnails/nezuko.jpg);
+                              background-size:cover;
+                             
+                    }
+                    @keyframes photos{
+                              0%{
+                                        background-image: url(/thumbnails/nezuko.jpg);
+
+                              }
+                              20%{
+                                        background-image: url(/thumbnails/zenitsu.jpg);
+
+                              }
+                              40%{
+                                        background-image: url(/thumbnails/tanjiro.jpg);
+
+                              }
+                              60%{
+                                        background-image: url(/thumbnails/inosoke.jpg);
+
+                              }
+                              100%{
+                                        background-image: url(/thumbnails/demon-slayer.jpg);
+
+                              }
+
+
+
+
+
+                    }
+          </style>
+</head>
+<body>
+          <div>
+                    
+          </div>
+        
+</body>
+</html>
