@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style>
+                    *{
+                              padding: 0;
+                              margin: 0;
+                              box-sizing: border-box;
+                    }
+                    body{
+                              width: 100vw;
+                              height: 100vh;
+                              background: #3d063e;
+                              display: grid;
+                              place-items: center;
+                    }
+                    h1{
+                              position: relative;
+                              text-align: center;
+                              font-size: 100px;
+                              color: transparent;
+                             
+
+                    }
+                    h1::before{
+                              content: "SURPRISE";
+                              position: absolute;
+                              color: black;
+                              width: 100%;
+                              border-right: 5px solid black;
+                              animation: textreveal 2s linear infinite;
+                              overflow: hidden;
+                              
+                    }
+                    @keyframes textreveal{
+                              0%{
+                                       width: 0%;
+                              }
+                              100%{
+                                     width:100%;
+                              }
+                    }
+          </style>
+</head>
+<body>
+          <h1>SURPRISE</h1>
+</body>
+</html>
