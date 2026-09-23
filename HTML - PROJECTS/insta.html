@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style>
+                    *{
+                              margin: 0;
+                              padding: 0;
+                               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                               
+                    }
+                    body{
+                              
+                               background: linear-gradient(70deg,purple,#350023);
+                    }
+                    .body{
+                              left: 0;
+                              right: 0;
+                    }
+                    .header{
+                            
+                              border-bottom: 5px;
+                              height:100px;
+                              
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-around;
+                              box-shadow:10px 10px 10px rgba(0,0,0,0.4)
+
+                    }
+                    .insta-logo{
+                              height: 70px;
+                              mix-blend-mode: color-burn;       /* it removes the white background*/     
+                              margin-right: -100px;
+                              
+                            
+                    }
+                    .insta-font{
+                              height: 180px;
+                              mix-blend-mode: color-burn;
+                              clip-path: inset(35px 10px 35px 5px);
+                              background: white;
+                              margin-top:9px;
+                              
+                              
+
+                    }
+                    input{
+                              height: 40px;
+                              width:700px;
+                              border-radius: 30px;
+                              font-size: 20px;
+                              letter-spacing: 1px;
+                              mix-blend-mode: color-burn;
+                              border:3px solid ;
+                              font-weight: bold;
+                              text-align: center;
+                    }
+                    .like-icon{
+                              height: 70px;
+                              mix-blend-mode: color-burn;
+                              
+                    }
+                    .profile-icon{
+                              height: 70px;
+                              mix-blend-mode: color-burn;
+                              
+                    }
+                    .profile{
+                              display: flex;
+                             
+                              align-items: center;
+                              justify-content: stretch;
+
+                    }
+                    .pro-img{
+                             
+                              height: 150px;
+                              border-radius: 100px;
+                              margin-top: 40px;
+                              margin-left: 60px;
+                              border: 4px solid;
+                    }
+                    .content{
+                            display: grid;
+                            row-gap: 10px;
+                            margin-left: 30px;
+                            margin-top: 30px;
+                            
+                             
+                    }
+                    .id{
+                              
+                            
+                              display: flex;
+                              align-items: center;
+                              
+                    }
+                    p{
+                              font-size: x-large;
+                              font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                              margin-left: 20px;
+                              margin-top: 1px;
+                              margin-right: 10px;
+                    }
+                    .follow{
+                              mix-blend-mode: color-burn;
+                              height: 25px;
+                              width: 70px;
+                              border: 3px solid;
+                              margin-right: 10px;
+                              border-radius: 20px;
+                              
+                    }
+                    .like-button{
+                              height: 25px;
+                              width: 30px;
+                              mix-blend-mode: multiply;
+                              border: 3px solid;
+                              border-radius: 2px;
+                             
+                    }
+                    .like{
+                              height: 20px;
+                             
+                    }
+                    
+                    
+                    .detail{
+                              display: flex;
+                              justify-content: space-between;
+                              
+                    }
+                    .highlight{
+                              height: 100px;
+                              column-gap: 20px;
+                              display: flex; 
+                              margin-left: 60px; 
+                              margin-top:30px;  
+                              justify-items: start;
+                    }
+                    .block{
+                             
+                              display:inline;
+                              height: 80px;
+                              background:black;
+                              width: 80px;
+                              border-radius: 100px;
+                              backdrop-filter: blur(20%);
+
+                    }
+                    .post{
+                              display: grid;
+                              grid-template-columns: 250px 250px 250px;
+                              column-gap: 10px;
+                              row-gap: 10px;
+                              margin-bottom: 50px;
+                              margin-left: 60px;
+
+                    }
+                    .box{
+                              display: inline;
+                              height: 250px;
+                              background: rgba(0,0,0,0.3);
+                              backdrop-filter: blur(20%);
+                              width:230px;
+                    }
+
+
+          </style>
+</head>
+<body>
+          <div class="container">
+                    <div class="header">
+                              <img class="insta-logo" src="/thumbnails/insta-logo.jpg">
+                              <img class="insta-font" src="/thumbnails/font-insta.jpg">
+                              <input type="search" placeholder="Search">
+                              <img class="like-icon" src="/thumbnails/like-icon.jpg">
+                              <img class="profile-icon" src="/thumbnails/profile-icon.jpg" alt="">
+                    </div>
+                    <div class="body">
+                              <div class="profile">
+                                        <div class="img">
+                                                  <img class="pro-img" src="/thumbnails/spider.jpg">
+                                        </div>
+                                        <div class="content">
+                                                  <div class="id">
+                                                            <p>Spider_Man</p>
+                                                            <button class="follow">follow</button>
+                                                            <button class="like-button">
+                                                                      <img class="like" src="/thumbnails//like-icon.jpg">
+                                                            </button>
+                                                  </div>
+                                                  <div class="detail">
+                                                            <p style="font-size: 22px;"><strong>2,112 </strong>posts </p>  
+                                                            <p style="font-size: 22px;"><strong>1.2M </strong>followers  </p>
+                                                            <p style="font-size: 22px;"> <strong>13 </strong>following</p>
+                                                  </div>
+                                                  <div class="info">
+                                                            <p style="font-size: 20px;">eat(); sleep(); code();repeat();</p>
+                                                  </div>
+                                        </div>
+                              </div>
+                              <div class="highlight">
+                                        <div class="block"></div>
+                                        <div class="block"></div>
+                                        <div class="block"></div>
+                                        <div class="block"></div>
+                                        <div class="block"></div> 
+                                        <div class="block"></div> 
+                                        <div class="block"></div>
+                              </div>
+                              <div class="post" >
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                          
+                              </div>
+                    </div>
+          </div>
+</body>
+</html>
