@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box-Shadow in CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+          /** ------------------------------------- -->
+          /** BOX SHADOW - CSS3
+          /** ---------------------------------------- --> */
+
+          /*? CSS3 Box Shadow is a new property to add shadow effects to any html Element. You can choose your own color, offset, blur, spread, offset and repetition. Unlike border, it not a part of CSS Box Model, thus doesn't effect the layout even if it is bigger in size. Also we can add multiple shadows with different colors and offsets. */
+
+          /** ------------------------------------- -->
+          /** IMPORTANT NOTES BOX SHADOW
+          /** ---------------------------------------- --> */
+
+          /*? Outer Box Shadow: Default box shadow is outer. x-offset and y-offset are compulsory properties, rest all are optional. */
+
+          /*? Inner Box Shadow: To use inner box shadow, use inset. Inset is only required if shadow is inside. By-default shadow is outside. */
+
+          /* note:-> you can use CSS Scan website for more collection of border
+          /** ---------------------------------------- --> */
+
+          * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          }
+
+          html {
+          font-family: "Urbanist";
+          }
+
+          body {
+          width: 100%;
+          height: 100vh;
+          background-color: #191717;
+          display: grid;
+          place-items: center;
+          }
+
+          .shadow {
+          width: 300px;
+          height: 300px;
+          padding: 40px;
+          background-color: rgb(174, 68, 90);
+          border-radius: 50%;
+
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+
+          /*? box shadow here  */
+          box-shadow: 40px -40px 60px 60px #ffb000; 
+                    /*x-axis y-axis blur density/spread color */
+          }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="shadow"></div>
+    </section>
+  </body>
+</html>
