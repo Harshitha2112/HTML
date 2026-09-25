@@ -1,0 +1,66 @@
+<!--flex box has a special property to prevent certain items from shrinking-->
+<!-- position helps us to do things like keep the header at top of the page while we scroll and also helps us to keep the side bar at the top of the page-->
+<!--position property has four special properties that we can use to move the element around-->
+<!--special properties are  top,bottom,left,right-->
+<!--if you want fixed element to reszie the page then use top,bottom,left-->
+<!--if you dont want to resize then use height and width-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         
+          <title>POSITION PRACTICE</title>
+          <style>
+                    .div1{
+                              width: 200px;
+                              height: 200px;
+                              background-color: aqua;
+                              margin-bottom: 20px;
+                            /*  margin-top: 60px; /* to make sure that our content is not covered by the header*/
+                             /* bt this is not the good practice better to set in the body*/
+                 
+                    }
+                    .div2{
+                              width: 200px;
+                              height: 200px;
+                              background-color: lightcoral;
+                    }
+                    .header{
+                              background-color: blueviolet;
+                              position: fixed;  /* when we set the position fixed ,it doesnt takes space on the page anymore*/
+                              top: 0;   /* make the top of our element zero px from the top of our browser window*/
+                              /* represents how far away from window*/
+                              left: 0;
+
+                    }
+                    .header2{
+                              background-color: bisque;
+                              margin-top: 50px;
+                              position: fixed;
+                              top: 50px;
+                              left: 50px;   /* so if  you also set opposite direction then it will strect*/
+                              right: 50px;  /*basically stretch the elemnt to meet those positions*/
+                              bottom: 100px;  /* stetch to bottom*/
+                              /* for some cases you dont know the bottom so best to use height*/
+                    }
+
+
+          </style>
+</head>
+<body 
+style="height: 3000px;
+margin-top: 60px;" >  <!--to scroll down-->
+  <div class="header">
+          header
+</div>
+<div class="header2">
+          header
+</div>
+          <div class="div1">
+                    div1
+          </div>
+          <div class="div2">
+                    div2
+          </div>
+          
+</body>
+</html>

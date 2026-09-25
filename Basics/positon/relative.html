@@ -1,0 +1,33 @@
+<!-- to avoid the element to stick to the screen use relative-->
+<!--relative displays the element as normal except if we put position absolute in relative position then it tells that will position to relativeto this element instead of relative to the page-->
+<!-- position relative works that it still displays the element as normal except if we put position absolute-->
+<!-- so when position absolute is inside position relative ,this will be positioned on the element not on the page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>relative practice</title>
+</head>
+<body style="padding-bottom: 1000px;">
+     <div>
+        
+            <div style="background-color: royalblue;
+                    height: 200px;
+                   ">
+                         div1
+           </div>
+           <div style="background-color:crimson;
+                    height: 200px;
+                    position: relative;"> <!---not fixed-->
+                         div2
+                    <div style="background-color: bisque;
+                         position: absolute;
+                         right: 5px;
+                         bottom: 10px;">  <!-- -->
+                                   absolute
+                    </div>
+           </div>
+         
+    
+     </div>     
+</body>
+</html>

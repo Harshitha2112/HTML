@@ -1,0 +1,45 @@
+<!--FOR POSITION FIXED ,TTHE ELEMENTS ARE PLACED I THE BROWSER WINDOW -->
+<!--POSITION ABSOLUTE , THE ELEMENTS ARE PLACED ON THE PAGE I.E, WHEN YOU SCROLL DOWN THE BROWSER-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         
+          <title>POSITION PRACTICE</title>
+          <style>
+                    .header{
+                              position: fixed;
+                              background-color: red;
+                              height: 100px;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              z-index: 1;      /* to override the appearing element we use this*/
+                              /*z-index determines which elements appear in front and which elements appear at the behind*/
+                              /* element with higher z-index will appear in front of elements with a lower z-index*/
+
+                    }
+                    .absolute{
+                              background-color: aqua;
+                              width: 200px;
+                              height: 200px;
+                              position: absolute;
+                              left: 0;
+                              top: 0; /* bt this is appearing above the header coz element was written in our code ,below our header*/
+                              /*z-index:0;*/
+
+                              /*generally an element that is written below is going to appear in front of elements that arre wriitten above it*/
+
+                    }
+          </style>
+</head>
+<body style="padding-bottom: 1000px;">
+         
+          <div class="header">
+                    header
+          </div>
+          <DIV class="absolute"> 
+                    ABSOLUTE
+          </DIV>
+          
+</body>
+</html>
