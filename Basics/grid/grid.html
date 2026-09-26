@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          
+          <title>grid practice</title>
+          <style>
+                    .grid1{
+                          display:grid;
+                          grid-template-columns: 100px 100px;
+                          margin-bottom: 50px;
+                    }
+                    .grid2{
+                              margin-bottom: 50px;
+                              display: grid;
+                              grid-template-columns: 100px 1fr;  /*fr= free spce i.e, it takes up remaining space*/
+                    }
+                    .grid3{
+                              display: grid;
+                              grid-template-columns: 100px 100px 100px;
+                              column-gap: 10px;
+                              row-gap: 10px;
+                              margin-bottom: 50px;
+
+                    }
+                    .grid4{
+                              display: grid;
+                              grid-template-columns: 100px 1fr 2fr;
+                    }
+                    
+
+                   
+          </style>
+</head>
+<body>
+          <div>
+                    <p style="background-color: lightblue; margin: 0;">div1</p>
+                    <p style="background-color: lightpink; margin: 0; margin-bottom: 50px;">div2</p>
+          </div>
+          <div class="grid1">
+                    <p  
+                    style="background-color: lightblue; 
+                    margin: 0;"
+                    >
+                    div1</p>
+                    <p 
+                    style="background-color: lightpink; 
+                    margin: 0;">
+                     div2</p>  
+          </div>
+          <div class="grid2">
+                    <p  
+                    style="background-color: lightblue; 
+                    margin: 0;"
+                    >
+                    div1</p>
+                    <p 
+                    style="background-color: lightpink; 
+                    margin: 0;">
+                     div2</p>  
+          </div>
+          <div class="grid3">
+                    <p  
+                    style="background-color: lightblue; 
+                    margin: 0;
+                    "
+                    >
+                    div1</p>
+                    <p 
+                    style="background-color: lightpink; 
+                    margin: 0;">
+                     div2</p>  
+                     <p  
+                     style="background-color: lightblue; 
+                     margin: 0;"
+                     >
+                     div1</p>
+                     <p 
+                     style="background-color: lightpink; 
+                     margin: 0;">
+                      div2</p>  
+                      <p  
+                      style="background-color: lightblue; 
+                      margin: 0;"
+                      >
+                      div1</p>
+                      <p 
+                      style="background-color: lightpink; 
+                      margin: 0;">
+                       div2</p>  
+          </div>
+          <div class="grid4">
+                    <p  
+                    style="background-color: lightblue; 
+                    "
+                    >
+                    div1</p>
+                    <p 
+                    style="background-color: lightpink;">
+                     div2</p> 
+                     <p  
+                    style="background-color: lightblue; 
+                 "
+                    >
+                    div3</p> 
+          </div>
+          
+</body>
+</html>
