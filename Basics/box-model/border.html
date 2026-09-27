@@ -1,0 +1,159 @@
+<!--
+/** -------------------------------------
+/**  BORDERS IN CSS
+/** ---------------------------------------- 
+
+/*? In CSS, the `border` property is used to create and control the borders of HTML elements. Borders are used to visually separate and define the boundaries of elements on a web page. The `border` property allows you to specify the style, width, and color of borders. Let's explore the `border` property in depth: */
+
+/* 1. Short-hand Syntax:
+       ? border: [border-width] [border-style] [border-color];
+
+    - `[border-width]`: Specifies the width of the border (e.g., `1px`, `2px`, `3px`, etc.).
+    - `[border-style]`: Specifies the style of the border (e.g., `solid`, `dotted`, `dashed`, etc.).
+    - `[border-color]`: Specifies the color of the border (e.g., a color name, hex code, RGB value, etc.). */
+
+/*TODO Let understand the Each border property one by one.  */
+
+/*? Border Width: The border-width property controls the thickness of the border. You can specify it using units like pixels (px), ems (em), or percentages (%). */
+
+/*? Border Style: The border-style property determines the style of the border. Common values include solid, dotted, dashed, double, groove, ridge, inset, and outset. Each style results in a different visual appearance for the border. */
+/* Keyword values */
+/* border-style: none;
+border-style: hidden;
+border-style: dotted;
+border-style: dashed;
+border-style: solid;
+border-style: double;
+border-style: groove;
+border-style: ridge;
+border-style: inset;
+border-style: outset; */
+
+/* top and bottom | left and right */
+/* border-style: dotted solid; */
+
+/* top | left and right | bottom */
+/* border-style: hidden double dashed; */
+
+/*? Border Color: The border-color property sets the color of the border. You can specify it using color names, hex codes, RGB values, or other color notations. */
+
+/** ---------------------------------------- 
+/** ------------------------------------- 
+/**  BORDERS IN CSS3
+/** ---------------------------------------- 
+/*? Border-radius: The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners. */
+
+/* Radius is set for all 4 sides */
+/*? border-radius: 10px; */
+
+/* top-left-and-bottom-right | top-right-and-bottom-left */
+/*? border-radius: 10px 20%; */
+
+/* Creating Custom Radius for Each Corner:  */
+/* top-left | top-right | bottom-right | bottom-left */
+/*? border-radius: 15px 5px 10px 20px; */
+
+/* checkout more on here   https://9elements.github.io/fancy-border-radius/ */
+/* checkout more on here   https://10015.io/tools/css-border-radius-generator */
+
+
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Border-CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+          .section-border{
+                    width: 1000px;
+                    color: antiquewhite;
+                    background-color: blue;
+                   /* border:10px solid #000;
+                    /*?  we can write each property individual  */
+                    /* border-width: 15px;
+                    border-style: solid;
+                    border-color: #003180; */
+
+                    /*? we can write them individually too  */
+                     border-top: 15px solid orange;
+                    border-right: 15px dotted red;
+                    border-bottom: 15px ridge green;
+                    border-left: 15px double purple; 
+
+                     /*? Now, further we can go more deeper with each individual values. */
+                    /* border-top-width: 15px;
+                    border-top-style: solid;
+                    border-top-color: #003b99; */
+          }
+          div{
+                    margin: 10px;
+                    width: 200px;
+                    height: 200px;
+                    background-color: brown;
+                    border-top-left-radius: 100px;
+                    border-bottom-right-radius: 100px; 
+                        
+          }
+          .div2{
+                    margin: 10px;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background-image: linear-gradient(to right top ,
+                    #051937,
+                    #004d7a,
+                    #008793,
+                    #00bf72,
+                    #a8eb12); 
+                    /* <!-- https://mycolor.space/gradient -->
+                    <!-- https://uigradients.com/#DirtyFog -->  */
+          }
+          .div3{
+                                        margin: 10px;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 24% 76% 70% 30% / 30% 30% 70% 70% ;
+                    background-image: linear-gradient(to right top ,
+                    #051937,
+                    #004d7a,
+                    #008793,
+                    #00bf72,
+                    #a8eb12); 
+          }
+    </style>
+  </head>
+  <body>
+   
+    <h1 id="main-heading">CSS Border-Radius</h1>
+    <section class="section-border">
+      <p>
+        Discover a world of possibilities with our comprehensive Thapa Technical
+        CSS course. Dive into over 50 real-world interview questions to boost
+        your job prospects. Unlock the secrets of CSS with 30+ invaluable tips
+        and tricks. Engage in dynamic learning with our animated PowerPoint
+        presentations. Showcase your creativity with 10+ captivating animation
+        projects. Take on the ultimate challenge with a mega, fully multipage
+        responsive website project. Elevate your web presence with SEO insights
+        and website performance testing. Plus, get expert guidance on choosing
+        between free and paid hosting options. Our course is more than just CSS;
+        it's your gateway to mastering web development.
+      </p> 
+    </section>
+      <div></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+  </body>
+</html>
