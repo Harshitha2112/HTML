@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         
+          <title>FLEXBOX</title>
+</head>
+<body style="padding-bottom: 1000px;"><!--in flex box they dont behave like a block element instead they like a inline block element-->
+ <div style="display: flex;
+      flex-direction: row;
+      margin-bottom: 50px;">
+          <p  
+          style="background-color: lightblue; 
+          margin: 0;"
+          ><!--so this is a flexible box-->
+          div1 text</p> <!-- if we add more text to the div then it expands to take up as much space as it needs to-->
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;">
+           div2</p>  
+</div>   
+<div style="display: flex;
+      flex-direction: row;"> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;"
+          >
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          flex: 1;">
+           flex1</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          flex: 2;"
+           >
+           flex2</p>
+</div> 
+
+
+<!-- NOW WE ARE GOING TO CODE THE  DIFFERENCES OF GRID AND FLEX-->  
+
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;"> 
+          <p   
+          style="background-color: lightpink; 
+          margin: 0;
+          flex: 1;">            <!--here we swappped the paragraph element. when we are swapping , along with the text ,flex space is also moved-->
+          flex1</p>              
+          <p
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;"
+          >
+          100px</p>
+         
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          flex: 2;"
+           >
+           flex2</p>
+</div>   
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      "> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          flex: 1;">
+           flex1</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          flex: 2;"
+           >
+           flex2</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: start; 
+      ">  <!--justify content is a flex box property and this determines how these elements are laid out horizontally--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: end; 
+      ">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: center; 
+      ">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: space-between; 
+      ">  <!--justify content is a flex box property and space between spreads out the elements evenly across the horizontal space--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: space-around; /* gives space around the content i.e, you can observe that before the first content ,there small gap bt after that content i.e, space btw both content will larger coz of space around property .btw space is the addition of both contents space around */
+                                     /* to solve this use can you space-evenly property for equal space in the beginning and in between */ 
+      align-items: start;">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: space-around; 
+      align-items: end;">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div> 
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      border-color: black;
+      border-style: solid;
+      justify-content: space-around; 
+      align-items: center;">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div>
+<div style="display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      height: 50px;
+      gap: 20px;
+      border-color: black;
+      border-style: solid;
+      justify-content: space-around; 
+      align-items: stretch;">  <!--justify content is a flex box property--> 
+      <p  
+          style="background-color: lightblue; 
+          margin: 0;
+          width: 100px;
+          ">
+          100px</p>
+          <p 
+          style="background-color: lightpink; 
+          margin: 0;
+          width: 100px;
+          flex-grow: 1;
+          flex-shrink: 5;
+          ">
+           100px</p>
+           <p  
+           style="background-color: lightblue; 
+           margin: 0;
+          width: 100px;"
+           >
+           100px</p>
+</div>  
+</body>
+</html>

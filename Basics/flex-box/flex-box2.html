@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox CSS</title>
+    <style>
+          /** ------------------------------------- -->
+          /**  FLEXBOX IN CSS
+          /** ---------------------------------------- --> */
+
+          /*? Flexbox is a one-dimensional layout model that helps you distribute space along a single axis (either horizontally or vertically) in a flexible and efficient way. It allows you to align and distribute elements within a container, making it easier to create complex layouts without using floats or positioning.  */
+          /* so by default display:flex is in row direction */
+          /** ----------- Flex Container Properties (Parent) ----------- */
+
+          /* display:flex will allow items to align in horizontal direction */
+          /*? 1:  Flex Container (display: flex;):
+          To create a flexbox layout, you need a flex container. Apply display: flex; to the container element.
+          .flex-container {
+          display: flex;
+          } */
+
+          /*? 2: Flex Items:
+          Elements inside the flex container are called flex items.
+          Flex items can be aligned and distributed along the main axis (horizontal or vertical). */
+
+          /*? 3: Main Axis and Cross Axis:
+          /** In a flex container,  one axis is considered the main axis, and the other is the cross axis. You can set the main axis to be either horizontal (row) or vertical (column). */
+
+          /*? Flex Direction (flex-direction): Use flex-direction to specify the direction to either main axis or cross-axis.
+          Values: row, row-reverse, column, column-reverse.
+          .flex-container {
+          flex-direction: row; /* Horizontal main axis (default) 
+          } */
+
+          /*? if the flex-direction:row then horizontal will be main-axis 
+          if flex-direction:column the vertical part will be main-axis and horizontal axis become the cross axis  */
+
+          /*? Items display in a row (the flex-direction property's default is row). */
+
+          /*? 4: Justify Content (justify-content): justify-content aligns flex items along the main axis(x-axis or horizontally).
+          Values include flex-start==start, flex-end==end, center, space-between, and space-around. */
+
+          /*? 5: Align Items (align-items):
+          align-items aligns flex items along the cross axis(y-axis or vertically).
+          Values include flex-start, flex-end, center, stretch, and baseline. */
+
+          /*? 6: flex-wrap:
+          - Specifies whether flex items should wrap to the next line when they overflow the container.
+          /** - Values: nowrap (default), wrap, wrap-reverse. */
+          /* when you use flex wrap, align content property is unlocked */
+         
+          /*? 7: align-content:
+          - Aligns multiple lines of flex items when there is extra space along the cross axis.
+          - Values: flex-start, flex-end, center, space-between, space-around, stretch. */
+
+          /** ------------- Flex Item Properties (children) ------------ */
+          /*? a. order:
+          - Determines the order in which a flex item appears relative to other flex items within the container.
+          - Lower values come first. */
+
+          /*? b. flex-grow:
+          - Specifies how much a flex item should grow to fill available space along the main axis.
+          - Default value is 0, meaning it won't grow. */
+
+          /*? c. flex-shrink:
+          - Specifies how much a flex item should shrink when there isn't enough space along the main axis.
+          - Default value is 1, meaning it will shrink. */
+
+          /*? d. flex-basis:
+          - Defines the initial size of a flex item along the main axis.
+          - Default value is auto, which means the item's size is determined by its content. */
+
+          /*? e. flex (Shorthand for flex-grow, flex-shrink, and flex-basis):
+          - Combines the three flex item properties in one declaration. */
+
+          /** ---------- Alignment Properties (Self) ---------------- */
+
+          /*? a. align-self:
+          - Overrides the align-items property for an individual flex item.
+          - Allows you to align a single item differently from others. */
+
+          * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          }
+          html {
+          font-size: 62.5%;
+          font-family: "Urbanist", sans-serif;
+          }
+
+          body {
+          display: grid;
+          place-items: center;
+          background-color: hsl(0, 0%, 96%);
+          }
+
+          #main-heading {
+          font-size: 6.2rem;
+          color: #1e1403;
+          margin: 3rem 0;
+          }
+
+          .flex-container {
+          width: 60%;
+          height: auto;  /* it will resize automatically with the wrap */
+          padding: 50px 0;
+          margin: 0 auto;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+          background: linear-gradient(to right, #514a9d, #24c6dc);
+          color: #fff;
+
+          /* flexbox container properties */
+          display: flex;
+          /* flex-direction: row-reverse;  items will go to the top right side and items are reversed i.e, item 4 is placed at the beginning and item 1 is at the of top right corner  */
+          /* flex-direction: column-reverse; same goes for column */
+          flex-direction: row;
+          /* justify-content: center; */
+          /* justify-content: space-between; */
+          justify-content: center;
+          align-items: start;
+
+          /* if you make fkex-direction as column then justify-content works in vertically and align-iitems works in horizontally */
+          gap: 20px;   /* gap between contents */
+
+          flex-wrap: wrap; /* if you minimize the screen size of browser item 3 will not overflow the container instead it will come down within the same container.this is coz of flex:wrap; property */
+          align-content: center; /* this property is unlocked when you use flex-wrap property */
+          }
+
+          .item {
+          min-width: 200px;
+          height: 200px; 
+          /*aspect-ratio: 1; it maintains the width means this can be used instaed of height if you want the height to have the values that is same as width */ 
+          /*it maintains the height and width */
+          background-image: linear-gradient(to right top, #004d7a, #00bf72, #a8eb12);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+          font-size: 24px;
+          flex: 1;
+          }
+
+          .item-2 {
+          /* flex-grow: 1;  it will takes up the available space in the container */
+          /* flex-shrink: 5; it will shrink from its original size .like it works in responsive designs*/
+          /* align-self: center; individually centering vertically*/
+          }
+
+          .item-3 {
+          /* flex-basis: 200px; it over writes the current width*/
+          }
+
+          /** ------------------------------------- -->
+          /**  INTERVIEW QUESTIONS IN CSS
+          /** ---------------------------------------- --> */
+
+          /*? 1: How do you center a div or text both horizontally and vertically using Flexbox? ⭐⭐⭐⭐⭐ */
+          /* To center items horizontally, you can use justify-content: center; on the flex container. */
+          /* To center items vertically, you can use align-items: center; on the flex container. */
+
+          /* .item {
+          width: 100px;
+          height: 100px;
+          background-image: linear-gradient(to right top, #004d7a, #00bf72, #a8eb12);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+          display: grid;
+          place-items: center;
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 0 1.6rem;
+          flex: auto;
+          } */
+
+          /* Here I will show them first how to center the text inplace of grid  */
+          /* then delete the 3 div and let it be one and centering that div  */
+
+          /*? 2: How do you reorder flex items without changing their HTML structure? */
+          /* You can use the order property on flex items. Lower values move items to the beginning of the container, while higher values move items to the end. */
+
+          /*? 3: Create a vertical navigation menu using Flexbox where the menu items are centered both horizontally and vertically within the container. */
+          /* <div class="menu">
+          <div class="menu-item">Home</div>
+          <div class="menu-item">About</div>
+          <div class="menu-item">Services</div>
+          </div> */
+          /* .menu {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px 0;
+          } */
+    </style>
+  </head>
+  <body>
+    <h1 id="main-heading">CSS FlexBox (Flexible Box Layout)</h1>
+    <hr />
+    <br />
+    <section class="flex-container">
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+       <div class="item item-4">item 4</div>
+      <!-- for flex wrap add 4 more div  -->
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+      <div class="item item-4">item 4</div> 
+    </section>
+  </body>
+</html>
