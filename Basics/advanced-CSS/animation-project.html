@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("/thumbnails/zenitsu.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      img {
+        width: 200px;
+        position: absolute;
+        bottom: 8.7%;
+        transform: scale(3);
+        animation: mariorun 3s linear infinite;
+      }
+      @keyframes mariorun {
+        100% {
+          translate: 0%;
+        }
+        0% {
+          translate: calc(100vw - 200px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+          <!-- Source website - GIPHY-->
+    <img src="/GIFS/Kimetsu No Yaiba Pixel Sticker.gif" alt="nezuko running " />
+  </body>
+</html>

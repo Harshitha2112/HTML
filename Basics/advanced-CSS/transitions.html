@@ -1,0 +1,116 @@
+<!--
+
+transition-property           ->  it defines which property should apply transition property like width, background-color etc..
+transition-duration           ->  it defines how long the transition effect should take time.
+transition-timing-function    ->  it defines how the intermediate speed is calculated like usind ease,ease-out,ease-in,ease-in-out etc...
+                              
+                    ease            ->  it is a default value. it starts slow and speeds up in the middle and again slowdown in the end.
+                    ease-in         ->  it starts slow and speeds up at the end.
+                    ease-in-out     ->  it starts slow then speed up at the middle and again slow downs at the end.
+                    ease-out        ->  it starts fast then slow down at the end.
+                    linear          ->  maintains constant speed from start to finish.
+                    steps           ->  creates step by step transition.
+                    cubic-bezier    ->  it allows create custom path for an element using four control points i.e,x1,y1,x2,y2
+                                        for more information about this go to cubic-bezier.com
+
+transition-delay              ->  it defines wait time before the transition effect takes place.
+
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Transitions Property</title>
+          <style>
+                    *{
+                              margin: 0;
+                              padding: 0;
+                    }
+                    body{
+                              display: grid;
+                              grid-template-columns: 400px 400px 400px;
+                              columns: 3;
+                              justify-content: space-between;
+                              background: black;
+                              min-height: 100vh;
+                              padding-top: 50px;
+                              padding-left: 100px;
+                             
+                    }
+                    .block1{
+                             
+                              height: 200px;
+                              width:200px;
+                              background: whitesmoke;
+                              transition-timing-function: width;
+                              transition-duration: 2s;
+                              transition-timing-function: ease;
+                              transition-delay:0s; 
+
+                             
+                    }
+                    .block1:hover{
+                              width: 300px;
+                    }
+                    .block2{
+                            
+                              height: 200px;
+                              width:200px;
+                              background: whitesmoke;
+                             /* transition-timing-function: transform;
+                              transition-duration: 2s;
+                              transition-timing-function: ease;
+                              transition-delay:0s;  */
+
+                              /*  Shorthand Property  */
+                              transition:transform 2s ease 0s;
+
+                    }
+                    .block2:hover{
+                              transform: rotate(135deg);
+                    }
+                    .block3{
+                            
+                              height: 200px;
+                              width:200px;
+                              background:whitesmoke;
+                              /* using multiple property separated by comma*/
+                              transition:transform 2s ease 0s,
+                              background-color 2s ease 0s;
+
+                    }
+                    .block3:hover{
+                              transform: rotate(135deg);
+                              background-color: crimson;   /* or use coral color*/
+                    }
+                    .block4{
+                            
+                              height: 100px;
+                              width:100px;
+                              background:whitesmoke;
+                              /* using all for multiple property */
+                              transition:all 1s ease-in-out;
+
+                    }
+                    .block4:hover{
+                              transform: rotate(135deg);
+                              background-color: coral;   
+                              scale:2;
+                    }
+          </style>
+</head>
+<body>
+          <div class="block1"></div>
+          <div class="block2"></div>
+          <div class="block3"></div>
+          <div class="block4"></div>
+          <div class="block5"></div>
+          
+</body>
+</html>
